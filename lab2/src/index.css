@@ -1,0 +1,159 @@
+/* Reset căn bản */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace; /* Font kiểu máy gõ chữ */
+}
+
+/* Theme Light / Dark */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Khung Container chính */
+.app-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.box-wrapper {
+  width: 100%;
+  max-width: 450px;
+  border: 2px solid currentColor;
+  padding: 16px;
+  background-color: transparent;
+}
+
+/* Header */
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 1px solid currentColor;
+  padding: 2px 8px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Controls (Filter & Search) */
+.controls-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.select-filter, .search-input {
+  border: 1px solid currentColor;
+  background: transparent;
+  padding: 4px 8px;
+  color: inherit;
+  outline: none;
+}
+
+.select-filter {
+  min-width: 90px;
+}
+
+.select-filter option {
+  background-color: #fff;
+  color: #000;
+}
+
+.search-input {
+  flex: 1;
+}
+
+/* Stats */
+.stats-bar {
+  border-top: 1px dashed currentColor;
+  border-bottom: 1px dashed currentColor;
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Movie List & Items */
+.movie-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.btn-view {
+  background: transparent;
+  border: 1px solid currentColor;
+  padding: 1px 6px;
+  font-size: 12px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.btn-view:hover {
+  background-color: currentColor;
+  color: #fff;
+}
+
+body.dark-mode .btn-view:hover {
+  color: #000;
+}
+
+/* Modal xem chi tiết */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-content {
+  border: 2px solid currentColor;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+body.light-mode .modal-content { background: #fff; color: #000; }
+body.dark-mode .modal-content { background: #222; color: #fff; }
+
+.modal-close-x {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: inherit;
+}
